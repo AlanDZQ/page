@@ -9,7 +9,7 @@
             zoom: 14,
 
             // The latitude and longitude to center the map (always required)
-            center: new google.maps.LatLng(42.6610638, 21.1986866), // New York
+            center: new google.maps.LatLng(0, 0), // Shenyang
 
 
             mapTypeControl: true,
