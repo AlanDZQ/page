@@ -199,15 +199,16 @@
                     <div class="contact-form">
 
                         <div class="col-md-4">
-                            <input type="text" placeholder="NAME *">
-                            <input type="text" placeholder="E-MAIL *">
-                            <input type="text" placeholder="SUBJECT">
+                            <input type="text" placeholder="NAME *" id="name">
+                            <input type="text" placeholder="E-MAIL *" id="email">
+                            <input type="text" placeholder="SUBJECT" id="subject">
                         </div>
 
                         <div class="col-md-5">
-                            <textarea placeholder="MESSAGE"></textarea>
-                            <input type="submit" value="SEND">
+                            <textarea placeholder="MESSAGE" id="message"></textarea>
+                            <input type="submit" value="SEND" onclick="sentMessage()">
                         </div>
+
                     </div>
                 </form>
             </div>
@@ -256,6 +257,23 @@
         </div>
     </div>
 
+    <script>
+        function sentMessage() {
+            var udata = "name=" + $('#name').val() + "&email=" + $('#email').val() + "&subject=" + $('#subject').val()
+                + "&message=" + $('#message').val();
+            $.ajax({
+                url: "getMessage",
+                data: udata,
+                success: function (data) {
+                    var results = eval(data);
+                    alert('Name: ' + results.name + 'Email: ' + results.email + 'Subject: ' +
+                        results.subject + 'Message: ' + results.message);
+                },
+                error: "error_",
+                dataType: "json"
+            });
+        }
+    </script>
     <a href="javascript:void(0)" class="scroll-top" id="scroll-top"><i class="pe-7s-angle-up"></i></a>
 
     <script src="js/vendor/jquery-1.11.2.min.js"></script>
