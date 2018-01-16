@@ -206,7 +206,7 @@
 
                         <div class="col-md-5">
                             <textarea placeholder="MESSAGE" id="message"></textarea>
-                            <input type="submit" value="SEND" onclick="sentMessage()">
+                            <input type="submit" value="SEND" onclick="sendEmail()">
                         </div>
 
                     </div>
@@ -258,21 +258,40 @@
     </div>
 
     <script>
-        function sentMessage() {
-            var udata = "name=" + $('#name').val() + "&email=" + $('#email').val() + "&subject=" + $('#subject').val()
-                + "&message=" + $('#message').val();
-            $.ajax({
-                url: "getMessage",
-                data: udata,
-                success: function (data) {
-                    var results = eval(data);
-                    alert('Name: ' + results.name + 'Email: ' + results.email + 'Subject: ' +
-                        results.subject + 'Message: ' + results.message);
-                },
-                error: "error_",
-                dataType: "json"
-            });
+        function sendEmail() {
+            saveToFirebase($('#email').val());
         }
+
+        function saveToFirebase(email) {
+            var emailObject = {
+                email: email
+            };
+
+            firebase.database().ref('subscription-entries').push().set(emailObject)
+                .then(function(snapshot) {
+                    success(); // some success method
+                }, function(error) {
+                    console.log('error' + error);
+                    error(); // some error method
+                });
+        }
+
+
+        // function sentMessage() {
+        //     var udata = "name=" + $('#name').val() + "&email=" + $('#email').val() + "&subject=" + $('#subject').val()
+        //         + "&message=" + $('#message').val();
+        //     $.ajax({
+        //         url: "getMessage",
+        //         data: udata,
+        //         success: function (data) {
+        //             var results = eval(data);
+        //             alert('Name: ' + results.name + 'Email: ' + results.email + 'Subject: ' +
+        //                 results.subject + 'Message: ' + results.message);
+        //         },
+        //         error: "error_",
+        //         dataType: "json"
+        //     });
+        // }
     </script>
     <a href="javascript:void(0)" class="scroll-top" id="scroll-top"><i class="pe-7s-angle-up"></i></a>
 
@@ -295,6 +314,19 @@
     <script src="js/ajax.js"></script>
     <script src="js/map-costum.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC23_Wc_WftMw7tzuH8jvbOLLtcGEUaknE",
+            authDomain: "page-alandong.firebaseapp.com",
+            databaseURL: "https://page-alandong.firebaseio.com",
+            projectId: "page-alandong",
+            storageBucket: "",
+            messagingSenderId: "409018273757"
+        };
+        firebase.initializeApp(config);
+    </script>
 </body>
 
 </html>
