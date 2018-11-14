@@ -326,7 +326,9 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-                            <p></p>
+                            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild
+                                Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed
+                                her seven versalia, put her initial into the belt and made herself on the way.</p>
                         </div>
                         <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
                             <div class="progress-wrap">
@@ -988,13 +990,13 @@
                                      data-animate-effect="fadeInRight">
                                     <form action="">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Name">
+                                            <input type="text" class="form-control" placeholder="Name" id="name">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Email">
+                                            <input type="text" class="form-control" placeholder="Email" id="email">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Subject">
+                                            <input type="text" class="form-control" placeholder="Subject" id="subject">
                                         </div>
                                         <div class="form-group">
                                             <textarea name="" id="message" cols="30" rows="7" class="form-control"
@@ -1002,7 +1004,7 @@
                                         </div>
                                         <div class="form-group">
                                             <input type="submit" class="btn btn-primary btn-send-message"
-                                                   value="Send Message">
+                                                   value="Send Message" onclick="sendMessage()">
                                         </div>
                                     </form>
                                 </div>
@@ -1017,6 +1019,42 @@
     </div><!-- end:container-wrap -->
 </div><!-- end:colorlib-page -->
 
+<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyC23_Wc_WftMw7tzuH8jvbOLLtcGEUaknE",
+        authDomain: "page-alandong.firebaseapp.com",
+        databaseURL: "https://page-alandong.firebaseio.com",
+        projectId: "page-alandong",
+        storageBucket: "page-alandong.appspot.com",
+        messagingSenderId: "409018273757"
+    };
+    firebase.initializeApp(config);
+</script>
+
+<script>
+    var database = firebase.database();
+
+    function sendMessage() {
+        var message = {
+            name: $('#name').val(),
+            email: $('#email').val(),
+            subject: $('#subject').val(),
+            message: $('#message').val()
+        };
+
+        database.ref('subscription-entries').push().set(message)
+            .then(function (snapshot) {
+                success(); // some success method
+            }, function (error) {
+                console.log('error' + error);
+                error(); // some error method
+            });
+
+        alert('Submitted successfully! I will read it carefully! :-)');
+    }
+</script>
 <!-- jQuery -->
 <script src="js/jquery.min.js"></script>
 <!-- jQuery Easing -->
