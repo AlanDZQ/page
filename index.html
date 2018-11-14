@@ -1044,7 +1044,6 @@
             message: $('#message').val()
         };
 
-        alert('aaaaaaa');
         database.ref('subscription-entries').push().set(message)
             .then(function (snapshot) {
                 success(); // some success method
@@ -1052,7 +1051,6 @@
                 console.log('error' + error);
                 error(); // some error method
             });
-
         alert('Submitted successfully! I will read it carefully! :-)');
     }
 </script>
