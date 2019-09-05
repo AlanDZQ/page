@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c5d31a1-df8c-4eed-b9cd-bfd053a5c792" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Resume.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Resume.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/album/plankton.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/album/plankton.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/about.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/about.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/img_bg_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/img_bg_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/music.html" beforeDir="false" afterPath="$PROJECT_DIR$/music.html" afterDir="false" />
-    </list>
+    <list default="true" id="7c5d31a1-df8c-4eed-b9cd-bfd053a5c792" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="932" column="42" selection-start-line="932" selection-start-column="42" selection-end-line="932" selection-end-column="42" />
+            <state relative-caret-position="363">
+              <caret line="933" column="38" lean-forward="true" selection-start-line="933" selection-start-column="38" selection-end-line="933" selection-end-column="38" />
               <folding>
                 <element signature="n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -158,12 +151,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565397780657</updated>
-      <workItem from="1565397785271" duration="3196000" />
+      <workItem from="1565397785271" duration="3467000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3196000" />
+    <option name="totallyTimeSpent" value="3467000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -232,8 +225,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="932" column="42" selection-start-line="932" selection-start-column="42" selection-end-line="932" selection-end-column="42" />
+        <state relative-caret-position="363">
+          <caret line="933" column="38" lean-forward="true" selection-start-line="933" selection-start-column="38" selection-end-line="933" selection-end-column="38" />
           <folding>
             <element signature="n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
