@@ -70,6 +70,19 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
                             <div class="blog-entry">
+                                <a onclick="night()" class="blog-img"><img src="album/night.JPG"
+                                    class="img-responsive"></a>
+                                <div class="desc">
+                                    <span><small>May 11, 2020 </small> | <small> Single </small></span>
+                                    <h3><a>Night</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+                            <div class="blog-entry">
                                 <a onclick="seventy()" class="blog-img"><img src="album/seventy.JPG"
                                     class="img-responsive"></a>
                                 <div class="desc">
@@ -155,6 +168,46 @@
                                     <span><small>Sep. 13, 2016 </small> | <small> EP </small></span>
                                     <h3><a>Dusk</a></h3>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="modal fade" id="night" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true" style="background:#FFF">
+                        <div class="modal-dialog">
+                            <div class="tabs-wrapper">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                    ×
+                                </button>
+                                <h1>Night</h1>
+
+                                <div class="tabs ef-tabs tabs-style-flip">
+                                    <nav>
+                                        <ul>
+                                            <li class="tab-current">
+                                                <a href="#night-1">
+                                                    <span class="tabs-title">Night</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <div class="content-wrap">
+                                        <div class="content-wrap">
+                                            <section id="night-1" class="content-current">
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <audio controls>
+                                                            <source src="music/night.mp3" type="audio/mpeg">
+                                                        </audio>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+
+                                    </div><!-- /content-wrap -->
+                                </div><!-- /tabs -->
                             </div>
                         </div>
                     </div>
@@ -548,6 +601,10 @@
 
     function seventy() {
         $('#seventy').modal();
+    }
+
+    function night() {
+        $('#night').modal();
     }
 
 </script>
